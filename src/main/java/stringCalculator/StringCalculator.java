@@ -23,6 +23,7 @@ public class StringCalculator {
 					hasNegatives=true;
 					messageForNegativeNumbers+=" "+n;
 				}
+				if(n<=1000)
 				sum+=n;
 			}
 		if(hasNegatives==true)
