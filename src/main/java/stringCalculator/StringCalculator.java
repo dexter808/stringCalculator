@@ -25,7 +25,7 @@ public class StringCalculator {
 				}
 				sum+=n;
 			}
-		if(hasNegatives)
+		if(hasNegatives==true)
 		{
 			throw new Exception(messageForNegativeNumbers);
 		}
