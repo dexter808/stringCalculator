@@ -20,5 +20,10 @@ class StringCalculatorTest {
 		assertEquals(12, stringCalculator.Add("12"),"Sum of 1 element should be the same as that element");
 		assertEquals(7, stringCalculator.Add("4,3"),"Sum of 3,4 = 7");
 	}
-
+	@Test
+	@DisplayName("Testing for unknown aount of numbers")
+	void testAddForUnknownAmtOfNum() {
+		assertEquals(15, stringCalculator.Add("1,2,,3,4,5"),"Adding unknown amount of numbers");
+		assertEquals(3, stringCalculator.Add("1,1,1"));
+	}
 }
