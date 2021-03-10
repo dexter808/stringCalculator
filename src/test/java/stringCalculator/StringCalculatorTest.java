@@ -33,4 +33,10 @@ class StringCalculatorTest {
 		assertEquals(3, stringCalculator.Add("2,\n1"));
 		assertEquals(5, stringCalculator.Add("3,\n1,1,"));
 	}
+	@Test
+	@DisplayName("Testing for custom delimeters")
+	void testAddForCustomDelimeter() {
+		assertEquals(6, stringCalculator.Add("//;\n4;2"));
+		assertEquals(8, stringCalculator.Add("//!\n4!8"));
+	}
 }
