@@ -26,4 +26,11 @@ class StringCalculatorTest {
 		assertEquals(15, stringCalculator.Add("1,2,,3,4,5"),"Adding unknown amount of numbers");
 		assertEquals(3, stringCalculator.Add("1,1,1"));
 	}
+	
+	@Test
+	@DisplayName("Testing for line change as a delimeter")
+	void testAddWithLineChangeAlsoAsDelimeter() {
+		assertEquals(3, stringCalculator.Add("2,\n1"));
+		assertEquals(5, stringCalculator.Add("3,\n1,1,"));
+	}
 }
