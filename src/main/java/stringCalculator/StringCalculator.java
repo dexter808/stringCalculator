@@ -11,15 +11,7 @@ public class StringCalculator {
 			numbers=number[1];
 			if(!delimiter.isEmpty() && delimiter.charAt(0)=='[')
 			{
-				String newDelimiter="[";
-				for(int i=1;i<delimiter.length()-1;i++)
-				{
-					char c=delimiter.charAt(i);
-					if(c!=']' && c!='[')
-						newDelimiter+=c;
-				}
-				newDelimiter+=']';
-				delimiter=newDelimiter;
+				delimiter="["+delimiter+"]";
 			}
 		}
 		String num[]=numbers.split(delimiter,0);
@@ -43,5 +35,6 @@ public class StringCalculator {
 			throw new Exception(messageForNegativeNumbers);
 		}
 		return sum;
+		
 	}
 }
