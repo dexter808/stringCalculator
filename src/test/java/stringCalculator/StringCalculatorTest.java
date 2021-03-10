@@ -45,5 +45,11 @@ class StringCalculatorTest {
 		assertThrows(Exception.class, () -> stringCalculator.Add("1,2,3\n,-6"),"Expected to throw exception for negative numbers but it did not");
 		assertThrows(Exception.class, () -> stringCalculator.Add("-3"));
 	}
+	@Test
+	@DisplayName("Testing for negative numbers not allowed with a specific message including all negatives")
+	void testAddForMultipleNegativeNumbers() throws Exception{
+		Throwable exc=assertThrows(Exception.class, () -> stringCalculator.Add("3,2\n-2,6\n-8"));
+		assertEquals(exc.getMessage(), "negatives not allowed : -2 -8");
+	}
 	
 }
