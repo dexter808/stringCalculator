@@ -39,4 +39,11 @@ class StringCalculatorTest {
 		assertEquals(6, stringCalculator.Add("//;\n4;2"));
 		assertEquals(12, stringCalculator.Add("//!\n4!8"));
 	}
+	@Test
+	@DisplayName("Testing for negative numbers not allowed")
+	void testAddForNegativeNumbers() {
+		assertThrows(Exception.class, () -> stringCalculator.Add("1,2,3\n,-6"),"Expected to throw exception for negative numbers but it did not");
+		assertThrows(Exception.class, () -> stringCalculator.Add("-3"));
+	}
+	
 }
