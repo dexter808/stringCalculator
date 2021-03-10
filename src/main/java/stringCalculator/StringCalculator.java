@@ -8,6 +8,10 @@ public class StringCalculator {
 			return 0;
 		if(num.length==1)
 			return Integer.parseInt(num[0]);
-		return Integer.parseInt(num[0])+Integer.parseInt(num[1]);
+		int sum=0;
+		for(int i=0;i<num.length;i++)
+			if(num[i].length()!=0)
+			sum+=Integer.parseInt(num[i]);
+		return sum;
 	}
 }
