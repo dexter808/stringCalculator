@@ -9,6 +9,18 @@ public class StringCalculator {
 			String number[]=numbers.split("\n",2);
 			delimiter=number[0].substring(2);
 			numbers=number[1];
+			if(!delimiter.isEmpty() && delimiter.charAt(0)=='[')
+			{
+				String newDelimiter="[";
+				for(int i=1;i<delimiter.length()-1;i++)
+				{
+					char c=delimiter.charAt(i);
+					if(c!=']' && c!='[')
+						newDelimiter+=c;
+				}
+				newDelimiter+=']';
+				delimiter=newDelimiter;
+			}
 		}
 		String num[]=numbers.split(delimiter,0);
 		boolean hasNegatives=false;
