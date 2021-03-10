@@ -35,8 +35,8 @@ class StringCalculatorTest {
 	}
 	@Test
 	@DisplayName("Testing for custom delimeters")
-	void testAddForCustomDelimeter() {
+	void testAddForCustomDelimiter() {
 		assertEquals(6, stringCalculator.Add("//;\n4;2"));
-		assertEquals(8, stringCalculator.Add("//!\n4!8"));
+		assertEquals(12, stringCalculator.Add("//!\n4!8"));
 	}
 }
