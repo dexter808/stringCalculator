@@ -66,4 +66,9 @@ class StringCalculatorTest {
 	void testAddForMultipleDelimiter() throws Exception{
 		assertEquals(6, stringCalculator.Add("//[*][%]\n1*2*%3"));
 	}
+	@Test
+	@DisplayName("Testing for multiple delimiters with any length")
+	void testAddForMultipleDelimiterAnyLength() throws Exception{
+		assertEquals(13, stringCalculator.Add("//[***][%][##]\n5##5***3"));
+	}
 }
