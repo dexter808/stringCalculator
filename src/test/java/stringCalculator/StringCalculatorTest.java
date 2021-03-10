@@ -56,4 +56,9 @@ class StringCalculatorTest {
 	void testAddForNumbersGreaterThanThousand() throws Exception{
 		assertEquals(7, stringCalculator.Add("3,4\n1001"),"Expected to ignore numbers grater than 1000");
 	}
+	@Test
+	@DisplayName("Testing for any delimiter length")
+	void testAddForAnyDelimiterLength() throws Exception{
+		assertEquals(6, stringCalculator.Add("//[****]\n1****2****3"));
+	}
 }
