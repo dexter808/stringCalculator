@@ -51,5 +51,9 @@ class StringCalculatorTest {
 		Throwable exc=assertThrows(Exception.class, () -> stringCalculator.Add("3,2\n-2,6\n-8"));
 		assertEquals(exc.getMessage(), "negatives not allowed : -2 -8");
 	}
-	
+	@Test
+	@DisplayName("Testing for adding numbers greater than 1000")
+	void testAddForNumbersGreaterThanThousand() throws Exception{
+		assertEquals(7, stringCalculator.Add("3,4\n1001"),"Expected to ignore numbers grater than 1000");
+	}
 }
